@@ -68,7 +68,7 @@ const blogPost = {
   comments: [
     {
       author: "An",
-      body: "Bài viết dễ hiểu 👍"
+      body: "Bài viết dễ hiểu "
     },
     {
       author: "Bình",
