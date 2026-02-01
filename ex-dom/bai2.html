@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Border Styles</title>
+    <style>
+        #box {
+            border: 5px solid green;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+
+    <form name="FormName">
+        <button id="btn20">Make border 20px-wide</button>
+        <button id="btn5">Make border 5px-wide</button>
+    </form>
+
+    <script>
+        function setBorderWidth(width) {
+            const box = document.getElementById('box');
+            box.style.borderWidth = width + 'px';
+        }
+
+        document.getElementById('btn20').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            setBorderWidth(20);
+        });
+
+        document.getElementById('btn5').addEventListener('click', function(event) {
+            event.preventDefault();
+            setBorderWidth(5);
+        });
+    </script>
+</body>
+</html>

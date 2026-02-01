@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Manipulating Styles</title>
+</head>
+<body>
+    <p id="text">Đây là đoạn văn bản mẫu. Hãy thay đổi style của tôi!</p>
+
+    <button onclick="changeColor()">Đổi màu (Blue)</button>
+    <button onclick="changeFont()">Đổi Font (Arial)</button>
+    <button onclick="changeSize()">Đổi Size (24px)</button>
+
+    <script>
+        function changeColor() {
+            document.getElementById("text").style.color = "blue";
+        }
+        function changeFont() {
+            document.getElementById("text").style.fontFamily = "Arial";
+        }
+        function changeSize() {
+            document.getElementById("text").style.fontSize = "24px";
+        }
+    </script>
+</body>
+</html>

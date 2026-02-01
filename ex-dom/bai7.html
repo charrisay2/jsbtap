@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7: Event Object</title>
+</head>
+<body>
+    <button id="btn">Click me to see Event Props</button>
+    <pre id="output"></pre>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function(event) {
+            const output = document.getElementById('output');
+            
+            const info = `
+                Type: ${event.type}
+                Target: ${event.target.tagName}
+                Bubbles: ${event.bubbles}
+                Cancelable: ${event.cancelable}
+                TimeStamp: ${event.timeStamp}
+                ClientX: ${event.clientX}
+                ClientY: ${event.clientY}
+            `;
+            
+            output.textContent = info;
+        });
+    </script>
+</body>
+</html>

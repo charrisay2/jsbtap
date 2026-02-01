@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #myDiv { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div id="myDiv">Hello World</div>
+    <div id="result"></div>
+
+    <script>
+        const div = document.getElementById('myDiv');
+        const result = document.getElementById('result');
+
+        const inlineColor = div.style.color; 
+
+        const computedStyle = window.getComputedStyle(div);
+        const realColor = computedStyle.color;
+
+        result.innerHTML = `
+            Inline Style Color: "${inlineColor}" (Rỗng) <br>
+            Computed Style Color: "${realColor}" (Có giá trị)
+        `;
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5: Event Propagation</title>
+    <style>
+        #parent { padding: 50px; background-color: lightblue; border: 1px solid blue; }
+        #child { padding: 20px; background-color: white; border: 1px solid black; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div id="parent">
+        PARENT (Click vào đây)
+        <div id="child">CHILD (Click vào đây để test chặn nổi bọt)</div>
+    </div>
+
+    <script>
+        document.getElementById('parent').addEventListener('click', function() {
+            alert('Bạn đã click vào PARENT!');
+        });
+
+        document.getElementById('child').addEventListener('click', function(event) {
+            alert('Bạn đã click vào CHILD!');
+            
+            event.stopPropagation(); 
+        });
+    </script>
+</body>
+</html>

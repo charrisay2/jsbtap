@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8: Table Interface</title>
+    <style>table, td { border: 1px solid black; padding: 10px; }</style>
+</head>
+<body>
+    <table id="table0">
+        <tr>
+            <td>Row 0 Cell 0</td>
+            <td>Row 0 Cell 1</td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="addRow()">Thêm dòng mới</button>
+
+    <script>
+        function addRow() {
+            const table = document.getElementById("table0");
+
+            const newRow = table.insertRow(-1);
+
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+
+            cell1.innerHTML = "New Cell 1";
+            cell2.innerHTML = "New Cell 2";
+        }
+    </script>
+</body>
+</html>

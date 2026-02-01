@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: Stylesheets</title>
+    <style>
+        body { background-color: #f0f0f0; }
+        h3 { color: red; }
+    </style>
+</head>
+<body>
+    <h3>Danh sách các CSS Rules tìm thấy:</h3>
+    <ul id="output"></ul>
+
+    <script>
+        const output = document.getElementById('output');
+        const sheets = document.styleSheets;
+
+        for (let i = 0; i < sheets.length; i++) {
+            try {
+                const rules = sheets[i].cssRules; 
+                for (let j = 0; j < rules.length; j++) {
+                    const li = document.createElement('li');
+                    li.textContent = rules[j].cssText;
+                    output.appendChild(li);
+                }
+            } catch (e) {
+                    console.warn("Không thể đọc CSS từ file ngoại lai (CORS)");
+            }
+        }
+    </script>
+</body>
+</html>
