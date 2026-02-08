@@ -1,0 +1,3 @@
+Nguyen Van An | 20 | an.nguyen@example.com | 0901234567 | 123 Le Loi | Male
+Tran Thi Bich | 22 | bich.tran@test.vn | 0918765432 | 456 Nguyen Hue | Female
+Le Hoang Nam | 19 | nam.le@school.edu | 0988888888 | 789 Da Nang | Male

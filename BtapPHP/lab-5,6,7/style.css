@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2 { color: #333; margin-top: 0; }
+
+.main-wrapper {
+    width: 100%;
+    max-width: 900px;
+}
+
+.menu-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    padding: 20px;
+}
+
+.menu-item {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-bottom: 5px solid transparent;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.menu-item .icon { font-size: 40px; margin-bottom: 15px; }
+.menu-item .title { font-size: 24px; font-weight: bold; margin-bottom: 5px; }
+.menu-item .desc { font-size: 14px; opacity: 0.7; }
+
+.item-read { border-color: #2196F3; color: #2196F3; }
+.item-read:hover { background-color: #e3f2fd; }
+
+.item-create { border-color: #4CAF50; color: #4CAF50; }
+.item-create:hover { background-color: #e8f5e9; }
+
+.item-update { border-color: #FF9800; color: #FF9800; }
+.item-update:hover { background-color: #fff3e0; }
+
+.item-delete { border-color: #f44336; color: #f44336; }
+.item-delete:hover { background-color: #ffebee; }
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; }
+th, td { padding: 12px 15px; border: 1px solid #ddd; text-align: left; }
+th { background-color: #333; color: white; }
+tr:nth-child(even) { background-color: #f9f9f9; }
+
+input[type="text"], input[type="number"], input[type="email"] {
+    width: 100%; padding: 10px; margin: 8px 0 20px 0;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+}
+
+.btn { text-decoration: none; padding: 8px 15px; border-radius: 4px; color: white; font-size: 14px; margin-right: 5px; display: inline-block;}
+.btn-add { background-color: #28a745; padding: 10px 20px; font-size: 16px; margin-bottom: 15px; }
+.btn-edit { background-color: #ffc107; color: black; }
+.btn-delete { background-color: #dc3545; }
+.btn-home { background-color: #6c757d; margin-top: 20px; padding: 10px 20px; }
+.submit-btn { background-color: #4CAF50; color: white; padding: 12px 20px; border: none; cursor: pointer; width: 100%; font-size: 16px; border-radius: 4px; }
+.submit-btn:hover { background-color: #45a049; }
